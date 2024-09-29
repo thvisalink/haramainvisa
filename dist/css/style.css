@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.534), rgba(0, 0, 0, 0.534)) 
+    ,url("../../assets/img/makkah-hd-tall-clock-tower-skyscrapers-ndebszao2gpw71yw.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    width: 83%;
+    margin-inline: auto;
+}
+
+.navbar {
+    padding: 20px 0 20px 0;
+    width: 100%;
+    position: fixed;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolling-active{
+    background-color: burlywood;
+}
+
+.navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .box-navbar .logo h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.navbar .box-navbar .logo p {
+    color: white;
+    font-size: 15px;
+}
+
+.navbar .box-navbar .menu {
+    display: flex;
+    column-gap: 18px;
+}
+
+.navbar .box-navbar .menu li {
+    list-style-type: none;
+}
+
+.navbar .box-navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+.navbar .box-navbar .menu li a:hover {
+    background-color: burlywood;
+    transition: all 0.4s ease;
+}
+.menu-bar {
+    color: white; 
+    font-size: 24px;
+    display: none;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.hero .box-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+}
+
+.hero .box-hero .box:nth-child(1) h1 {
+    color: antiquewhite;
+    font-size: 4vw;
+    padding-top: 55px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero .box-hero .box:nth-child(1) p {
+    color: antiquewhite;
+    font-size: 1.6vw;
+}
+.hero .box-hero .box:nth-child(2) img {
+    width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+    .menu-bar {
+        display: block;
+    }
+
+    .navbar .box-navbar .menu {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        top: 70px;
+        right: 50%;
+        transform: translateX(50%);
+        opacity: 0;
+        transition: all 0.3s ease;
+        background-color: burlywood;
+    }
+}
+
+.navbar .box-navbar .menu.menu-active {
+    top: 80px;
+    opacity: 1;
+    border-top: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+    .hero .box-hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 20;
+    }
+
+    .hero .box-hero .box:nth-child(1) {
+        order: 2;
+        text-align: center;
+    }
+
+    .hero ,box-hero .box:nth-child(2) {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero .box-hero .box:nth-child(2) img {
+        width: 50vw;
+    }
+}
+
+@media screen and  (max-width: 370px ) {
+    .hero .box-hero {
+        row-gap: 0;
+    }
+
+    .hero .box-hero .box:nth-child(2) {
+        width: 50vw;
+        align-items: flex-end;
+        justify-self: center;
+    }
+}
+
+/* Layanan */
+
+.services {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+/* keunggulan*/
+
+.sup1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 15px;
+}
+.superior .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 100px;
+}
+
+.superior .box-container .box1 {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.superior .box-container .box1 i {
+    padding: 0.8rem;
+    font-size: 5rem;
+    color: rgb(92, 60, 12);
+}
+
+.superior .box-container .box1 h3 {
+    font-size: 2rem;
+    color: #595757;
+}
+
+.superior .box-container .box1 p {
+    font-size: 1.1rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* Tata Cara */
+
+.serv1 {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 110px;
+    background: linear-gradient(to top, #ffffff, #dfbca2, #7d7764);
+}
+
+.serv1 .box2 {
+    margin-top: 100px;
+}
+
+.serv1-box2 :nth-child(1) {
+    margin-bottom: 70px;
+}
+
+.serv1-box2 :nth-child(1) h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.serv1-box2 :nth-child(1) p {
+    line-height: 2;
+}
+
+.serv1-box2 .box2:nth-child(2) {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    gap: 20px;
+}
+
+.serv1-box2 .box2:nth-child(2) .service {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+
+.serv1-box2 .box2:nth-child(2) .service span {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-top: 100px;
+}
+
+.serv1-box2 .box2:nth-child(2) .service p {
+    text-align: left;
+    margin-top: 20px;
+    color: rgb(95, 87, 77);
+    line-height: 2;
+    font-size: 20px;
+}
+
+.serv1-box2 .box2:nth-child(2) .service:nth-child(1),
+.serv1-box2 .box2:nth-child(2) .service:nth-child(3) {
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .serv1-box2 .box2:nth-child(2) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .serv1-box2 .box2:nth-child(1) h2 {
+        font-size: 25px;
+    }
+
+    .serv1-box2 .box2:nth-child(2) {
+        align-items: center;
+    }
+
+    .serv1-box2 .box2:nth-child(2) .service:nth-child(1),
+    .serv1-box2 .box2:nth-child(2) .service:nth-child(3) {
+        align-self: center;
+    }
+
+    .serv1-box2 .box2:nth-child(2) .service p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+/* maps */
+
+.maps1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.section2 {
+    height: 200vh;
+    padding: 20px 9%;
+    padding-bottom: 100px;
+    padding-left: 170px;
+}
+
+iframe {
+    width: 550px;
+    height: 550px;
+    padding: 21px 21px;
+}
+
+@media screen and (max-width: 768px) {
+    .section2 iframe {
+        flex-direction: column;
+        height: auto;
+    }
+}
+/* kontak */
+
+.contact1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact1 h1 {
+    text-align: center;
+}
+
+.contact1 p {
+    text-align: center;
+}
+
+.contact2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container3 {
+    margin-bottom: 50px;
+}
+
+.container3 .cont1-box3 {
+    text-align: center;
+}
+.box3 a {
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(0, 128, 26);
+    margin-top: 5px;
+
+}
+
+/* gambar */
+
+.gambar {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+
+.footer {
+    padding: 50px 0 50px 0;
+    background-color: rgb(235, 217, 128);
+}
+
+.footer .box-footer {
+    display: grid;
+    grid-template-columns: 2fr auto 2fr;
+    column-gap: 100px;
+    align-items: center;
+}
+
+.footer .box-footer .box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    grid-row: 10px;
+}
+
+.footer .box-footer .box:nth-child(2) a {
+    text-decoration: none;
+    color: rgb(46, 46, 202);
+    font-size: 15px;
+}
+
+.footer .box-footer .box:nth-child(2) p {
+    font-weight: 200;
+}
+
+.footer .box-footer .box a {
+    text-align: center;
+}
+.footer .box-footer .box:nth-child(3) {
+    text-align: center;
+}
+
+.footer .box-footer .box:nth-child(3) span {
+    font-weight: bold;
+}
+
